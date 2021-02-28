@@ -1,0 +1,12 @@
+{
+  "name": "gamezone",
+  "displayName": "gamezone",
+  "expo": {
+    "name": "gamezone",
+    "slug": "gamezone",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
