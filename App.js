@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Home from './screens/Home';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
-import Navigator from './routes/homeStack';
+import Navigator from './routes/Drawer';
 
 const getFonts = () => Font.loadAsync({
   'nunito-regular': require('./assets/fonts/Nunito/Nunito-Regular.ttf'),
