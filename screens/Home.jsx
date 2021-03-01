@@ -22,6 +22,12 @@ function Home({navigation}){
         setModalOpen(false);
   };
 
+  const delList = (key) => {
+      setReviews((prevData) => {
+          return prevData.filter(data => data.key != key)
+      })
+  }
+
     return(
         <View style={globalStyles.container}>
 
@@ -52,6 +58,11 @@ function Home({navigation}){
                 <TouchableOpacity onPress={() => navigation.navigate('ReviewDetails', item)}>
                     <Card>
                         <Text style={globalStyles.titleText}>{item.title}</Text>
+                        <MaterialIcons
+                        name='delete'
+                        size={24}
+                        onPress={() => delList(item.key)}
+                        />
                     </Card>
                 </TouchableOpacity>
             )}
