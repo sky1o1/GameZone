@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, TextInput, View, Text } from 'react-native';
+import { TextInput, View, Text } from 'react-native';
 import { globalStyles } from '../styles/global.js';
 import { Formik } from 'formik';
 import * as yup from 'yup';
