@@ -6,7 +6,7 @@ import Card from '../shared/Card';
 import ReviewForm from './ReviewForm';
 
 function Home({navigation}){
-    const [modalOpen, setModalOpen] = useState(false)
+    const [modalOpen, setModalOpen] = useState()
 
     const [reviews, setReviews] = useState([
         { title: 'Zelda, Breath of Fresh Air', rating: 5, body: 'lorem ipsum', key: '1' },
@@ -19,7 +19,7 @@ function Home({navigation}){
         setReviews((currentReviews) => {
         return [review, ...currentReviews];
         });
-        setModalOpen(false);
+        // setModalOpen(false);
   };
 
   const delList = (key) => {

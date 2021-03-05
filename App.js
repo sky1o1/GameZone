@@ -1,36 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
 import Navigator from './routes/Drawer';
+import BottomNavigator from './navigation/BottomNavigation';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 const getFonts = () => Font.loadAsync({
   'nunito-regular': require('./assets/fonts/Nunito/Nunito-Regular.ttf'),
   'nunito-bold': require('./assets/fonts/Nunito/Nunito-Bold.ttf'),
 });
 
+const Stack = createStackNavigator();
+
 export default function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
   
   useEffect(() => {
     getFonts()
   }, [])
 
-  // if (fontsLoaded) {
-  //   return (
-  //     <Home />
-  //   );
-  // } else {
-  //   return (
-  //     <AppLoading 
-  //       startAsync={getFonts} 
-  //       onFinish={() => setFontsLoaded(true)} 
-  //       onError={console.warn}
-  //     />
-  //   )
-  // }
 
   return(
+    <>
     <Navigator />
+    {/* <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home" component={BottomNavigator} />
+      </Stack.Navigator>
+    </NavigationContainer> */}
+    </>
   )
 
 }

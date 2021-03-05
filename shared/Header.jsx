@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
         height: '100%',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: 'red'
     },
     headerText: {
       fontWeight: 'bold',
